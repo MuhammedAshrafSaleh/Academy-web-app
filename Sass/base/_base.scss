@@ -1,0 +1,118 @@
+//@import "mixins.scss";
+
+//colors
+:root {
+    --primary: #2B32B2;
+    --secondary: #1488CC;
+    //    --primary: #4caf50;
+    //    --secondary: #68707a;
+    //    --third: #ffd13c;
+    //    --forth: #6dc4f2;
+    //    --fifth: #f44336;
+    //    --sexth: #32d5ba;
+    //    --white: azure;
+    //    --black: #000;
+    //    --gray: #e5e5e5;
+    //    --gray-dark: #909aa6;
+    //    --border: 0.3px solid var(--gray);
+}
+
+html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+
+
+
+body {
+    background-size: cover;
+    width: 100%;
+    height: 300rem;
+    font-family: Montserrat;
+}
+
+
+
+
+html {
+    font-size: 62.5%;
+
+    @include responsive(bigDesktop) {
+        font-size: 75%;
+    }
+
+    @include responsive(tabLand) {
+        font-size: 56.25%;
+    }
+
+    @include responsive(tab) {
+        font-size: 50%;
+    }
+
+    @include responsive(phone) {
+        font-size: 45%;
+    }
+
+    @include responsive(smallphone) {
+        font-size: 40%;
+    }
+}
+
+
+//------------------------------------Custom Things
+
+.container {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.clearfix:after,
+.clearfix:before {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+
+}
+
+
+a:focus,
+a:link {
+    text-decoration: none !important;
+    outline: none;
+}
+
+ul {
+    list-style: none !important;
+}
+
+button,
+button:focus {
+    outline: none;
+    border: none;
+    background: none;
+}
+
+//-----------------------------------Custom Elements
+
+
+::-webkit-scrollbar {
+    background-color: rgba(225,225,225,0.1);
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-image: linear-gradient(to bottom, var(--secondary), var(--primary));
+}

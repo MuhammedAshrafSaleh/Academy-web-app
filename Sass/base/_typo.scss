@@ -1,0 +1,68 @@
+.custom__heading {
+  font-size: 3rem;
+  color: transparent;
+  position: relative;
+  background-image: linear-gradient(to right, #1488cc, #2b32b2);
+  -webkit-background-clip: text;
+  background-clip: text;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  overflow: hidden;
+
+  @include responsive(tab) {
+    font-size: 3.8rem;
+  }
+
+  .typo {
+    color: transparent;
+    background-image: linear-gradient(to right, #1488cc 50%, $secondary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-transform: capitalize;
+  }
+
+  #icon {
+    position: absolute;
+    width: 1000px;
+    left: 38%;
+    top: -22px;
+  }
+
+  svg {
+    width: 100%;
+  }
+
+  &::after {
+    content: "";
+    width: 30%;
+    text-align: center;
+    border-radius: 10px;
+    border-bottom: 1px solid #2b32b2;
+  }
+}
+
+.custom__text {
+  color: #2b32b2;
+  font-weight: 500;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+
+  @include responsive(tab) {
+    font-size: 1.5rem;
+  }
+
+  @include responsive(phone) {
+    font-size: 1.8rem;
+  }
+}
+
+.custom__heading2 {
+  color: var(--secondary);
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+
+  @include responsive(tab) {
+    font-size: 2.8rem;
+  }
+}

@@ -1,0 +1,76 @@
+.pricing {
+    width: 100%;
+    padding: 5rem 0;
+    margin: 10rem 0;
+    text-align: center;
+
+    &__content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+
+    .custom__text {
+        margin-bottom: 10rem;
+    }
+
+    &__headng {
+        text-transform: capitalize;
+    }
+
+    &__item {
+        padding: 2rem 0;
+        text-align: center;
+        box-shadow: 0 0 2rem rgba(0, 0, 0, 0.4);
+        background: rgba(225, 225, 225, 0.3);
+        flex-basis: 24%;
+        font-size: 1.3rem;
+        transition: transform 0.2s ease-out;
+
+        &:hover {
+            transform: translateY(-1rem)
+        }
+        @include responsive(tab) {
+            flex-basis: 48%;
+            margin-bottom: 2rem;
+        }
+    }
+
+    &__item.active {
+        background-image: linear-gradient(to left bottom, #1488CC, #2B32B2);
+        color: $white;
+
+    }
+
+    &__item.active &__heading {
+        color: $white;
+    }
+
+    &__item.active &__btn {
+        background: $white;
+        color: $black-1;
+    }
+
+    &__num {
+        font-size: 4rem;
+        font-weight: 100;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__link {
+        margin: 1rem 0;
+        font-weight: 600;
+    }
+
+    &__btn {
+        background-image: linear-gradient(to left bottom, #1488CC, #2B32B2);
+        color: $white;
+        box-shadow: 0 0 2rem rgba(0, 0, 0, 0.4);
+    }
+}
